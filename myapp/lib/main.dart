@@ -162,7 +162,8 @@ class _PersonalSection extends StatelessWidget {
   }
 }
 
-/// Passport-style photo. Replace `assets/photo.jpg` to change it.
+/// Grey passport-photo placeholder. Replace the child with
+/// `Image.asset('assets/photo.jpg', fit: BoxFit.cover)` to show a real photo.
 class _PhotoBox extends StatelessWidget {
   const _PhotoBox();
 
@@ -170,12 +171,13 @@ class _PhotoBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 120,
-      height: 160,
+      height: 140,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         color: const Color(0xFFEFEFEF),
         border: Border.all(color: const Color(0xFFBDBDBD)),
       ),
-      child: Image.asset(
+       child: Image.asset(
         'assets/photo.jpg',
         fit: BoxFit.cover,
         errorBuilder: (context, error, stackTrace) => const Center(
